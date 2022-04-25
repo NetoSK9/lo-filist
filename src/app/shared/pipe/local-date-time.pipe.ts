@@ -7,9 +7,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class LocalDateTimePipe implements PipeTransform {
   
   transform(date: string): string {
-      let moment = new Date();
+      let now = new Date();
       
-      return moment.getMinutes().toString();
+      return ("" + now.getDay() + "/" + now.getMonth() + "/" + now.getFullYear());
   }
 
 }
