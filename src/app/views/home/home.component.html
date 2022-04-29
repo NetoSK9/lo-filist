@@ -1,15 +1,12 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row class="toolbar-row">
-      <span>
+      <button mat-raised-button (click)="goToRelex()">
         <mat-icon>music_note</mat-icon>
         Relex Listening Some Lofi
         <mat-icon class="toolbar-icon">music_note</mat-icon>
-      </span>
-      <span class="toolbar-spacer"></span>
-      <button mat-raised-button >
-        Play
-        <mat-icon>play_circle_outline</mat-icon>
       </button>
+      <span class="toolbar-spacer"></span>
+      <button mat-raised-button (click)="addLive()" ><mat-icon>add</mat-icon> Live </button>
     </mat-toolbar-row>
 </mat-toolbar>
 

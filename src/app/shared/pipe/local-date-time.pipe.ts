@@ -1,15 +1,13 @@
-import { Pipe, PipeTransform } from '@angular/core';
-
+import { PipeTransform, Pipe } from '@angular/core';
+import * as moment from 'moment';
 
 @Pipe({
-  name: 'localDateTimePipe'
+    name: 'localDateTimePipe'
 })
 export class LocalDateTimePipe implements PipeTransform {
-  
-  transform(date: string): string {
-      let now = new Date();
-      
-      return ("" + now.getDay() + "/" + now.getMonth() + "/" + now.getFullYear());
-  }
+    transform(date: string): string {
+        let dateOut: moment.Moment = moment(date, "YYYY-MM-DDTHH:mm:ss");
+        return dateOut.format("DD-MM-YYYY HH:mm");
+    }
 
 }
